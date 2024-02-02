@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "lexicom_task_solution"
+version = "0.1.0"
+description = "Solving a test task for a Python backend developer vacancy"
+authors = ["kypi-mne-tapo4ki"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+pydantic = "^2.6.0"
+redis = {extras = ["hiredis"], version = "^5.0.1"}
+
+[tool.poetry.group.dev.dependencies]
+httpx = "^0.26.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.5.1"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
